@@ -35,5 +35,11 @@ def phi(h, d):
     return (1 - d / h) ** 4 * (4 * d / h + 1)
 
 
-def dist2dMultiple(a, b, axis=1):
-    return np.linalg.norm((a - b)[:, :2], axis=axis)
+def dist2dMultiple(a, b):
+    """
+    2d Distance computation for multiple points at once
+    :param a: array of points
+    :param b: compute distance to this point
+    :return:
+    """
+    return np.linalg.norm((a - b)[:, :2], axis=1)
