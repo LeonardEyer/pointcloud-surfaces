@@ -35,5 +35,5 @@ def phi(h, d):
     return (1 - d / h) ** 4 * (4 * d / h + 1)
 
 
-def dist2d(a, b):
-    return np.linalg.norm(a[:2] - b[:2])
+def dist2dMultiple(a, b, axis=1):
+    return np.linalg.norm((a - b)[:, :2], axis=axis)
